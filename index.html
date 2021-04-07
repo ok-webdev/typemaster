@@ -17,7 +17,7 @@
                 <a href="#" class="logo">
                     <img src="assets/icons/logo.svg" alt="Logo">
                 </a>
-                <button class="btn">Pre-order now</button>
+                <button class="btn form-caller">Pre-order now</button>
             </div>
             <!-- /.header__content -->
         </div>
@@ -34,7 +34,7 @@
                             Improve your productivity and gaming without breaking the bank. Upgrade to a high quality mechanical typing experience.
                         </p>
                         <div class="hero__preorder">
-                            <button class="btn btn_hero">Pre-order now</button>
+                            <button class="btn btn_hero form-caller">Pre-order now</button>
                             <p class="hero__release">Release on 5/27</p>
                         </div>
                     </div>
@@ -124,7 +124,24 @@
       <!-- /.footer__copyright -->
     </footer>
     <!-- /.footer -->
-    <script src="script.js"></script>
+
+    <div class="overlay">
+      <div class="modal">
+        <h3 class="title title_h3">Pre-order form</h3>
+        <form action="#" class="preorder">
+          <input type="text" id="name" name="name" placeholder="Name*" required>
+          <input type="email" id="email" name="email" placeholder="Email*" required>
+          <input type="tel" id="phone" name="phone" placeholder="Phone">
+          <button class="btn btn_hero btn_modal">Pre-order now</button>
+        </form>
+        <!-- /.preorder -->
+        <div class="modal__close">&#10006;</div>
+      </div>
+      <!-- /.modal -->
+    </div>
+    <!-- /.overlay -->
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
