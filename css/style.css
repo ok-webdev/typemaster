@@ -188,3 +188,31 @@ body {
     color: var(--secondary);
     margin-top: 27px;
 }
+
+.advantages {
+  margin-top: 168px;
+}
+
+.advantages__content {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.advantages__item{
+  width: 95%;
+}
+.advantages__image{
+  width: 65px;
+  height: 65px;
+  background: var(--action);
+  border-radius: 16px;
+  padding: 22px;
+  margin-bottom: 48px;
+}
+
+.advantages__decription{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--secondary);
+  margin-top: 24px;
+}
