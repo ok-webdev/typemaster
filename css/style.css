@@ -19,10 +19,11 @@ body {
     font-family: 'Barlow', sans-serif;
     background: var(--background);
     position: relative;
+    overflow-x: hidden;
 }
 
 .container {
-    width: 1110px;
+    max-width: 1110px;
     margin: 0 auto;
 }
 
@@ -76,13 +77,6 @@ body {
     font-size: 24px;
 }
 
-.decoration {
-    position: absolute;
-    width: 9%;
-    height: 240px;
-    background: var(--additional);
-}
-
 .header {
     padding: 55px 0;
 }
@@ -95,6 +89,7 @@ body {
 
 .hero {
     position: relative;
+    background: url('../assets/images/decoration.jpg') top 0 right -150px no-repeat;
 }
 
 .hero__content {
@@ -136,8 +131,9 @@ body {
 }
 
 .hero__img {
-    width: 540px;
+    flex-basis: 50%;
     height: 480px;
+    object-fit: cover;
     border-radius: 15px;
 }
 
@@ -148,6 +144,7 @@ body {
 }
 
 .keyboard {
+  background: url('../assets/images/decoration.jpg') bottom 0 left -150px no-repeat;
     margin-top: 30px;
 }
 
@@ -170,12 +167,27 @@ body {
 }
 
 .keyboard__image_decorated {
+    position: relative;
     width: 255px;
     height: 480px;
-    background: linear-gradient(var(--action), var(--action)),
-        url('../assets/images/keyboard-3.jpg') center/cover no-repeat;
-    background-blend-mode: multiply;
     margin-right: 30px;
+}
+
+.keyboard__image_decorated div{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(var(--action), var(--action));
+  mix-blend-mode: multiply;
+  border-radius: 20px;
+}
+.keyboard__image_decorated img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
 }
 
 .keyboard__text {
@@ -242,6 +254,7 @@ body {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, .2);
+  z-index: 2;
 }
 
 .modal{
@@ -284,4 +297,62 @@ body {
   color: var(--primary);
   margin: 10px 0;
   outline: transparent;
+}
+
+@media screen and (max-width: 1366px) {
+  .container {
+    width: 90%;
+  }
+  .hero,
+  .keyboard {
+    background: var(--background)
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .hero__content img{
+    margin-right: -20%;
+  }
+  .keyboard__content{
+    flex-direction: column;
+  }
+  .keyboard__text{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 72px;
+  }
+  .keyboard__description {
+    margin-top: 0;
+  }
+  /* .keyboard__image {
+    height: 100%;
+  }
+  .keyboard__image_decorated{
+    width: 40%;
+    height: 100%;
+  } */
+  .advantages__content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .container{
+    width: 95%;
+  }
+  .advantages__content {
+    grid-template-columns: 1fr;
+  }
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .modal {
+    top: 5%;
+  }
 }
