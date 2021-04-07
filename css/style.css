@@ -75,12 +75,6 @@ body {
     font-size: 24px;
 }
 
-.text-block {
-    font-size: 18px;
-    font-weight: 500;
-    color: var(--secondary);
-}
-
 .decoration {
     position: absolute;
     width: 9%;
@@ -110,6 +104,9 @@ body {
 
 .hero__description {
     width: 70%;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary);
     margin-top: 24px;
 }
 
@@ -147,4 +144,47 @@ body {
     top: 0;
     right: 0px;
     border-radius: 20px 0 0 20px;
+}
+
+.keyboard {
+    margin-top: 30px;
+}
+
+.keyboard__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.keyboard__images {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.keyboard__image {
+    width: 445px;
+    height: 480px;
+    border-radius: 20px;
+}
+
+.keyboard__image_decorated {
+    width: 255px;
+    height: 480px;
+    background: linear-gradient(var(--action), var(--action)),
+        url('../assets/images/keyboard-3.jpg') center/cover no-repeat;
+    background-blend-mode: multiply;
+    margin-right: 30px;
+}
+
+.keyboard__text {
+    width: 23%;
+}
+
+.keyboard__description {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: var(--secondary);
+    margin-top: 27px;
 }
