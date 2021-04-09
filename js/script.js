@@ -4,9 +4,11 @@ const formCaller = document.querySelectorAll(".form-caller"),
   modalClose = document.querySelector(".modal__close"),
   formSubmit = document.querySelector("btn_modal"),
   body = document.querySelector("body");
+  inputs = document.querySelectorAll('input');
 
 function openModal(event) {
   event.preventDefault();
+  window.scrollTo(0, 0);
   overlay.style.display = "block";
   body.style.overflowY = "hidden";
 }
@@ -19,6 +21,7 @@ function closeModal(event) {
   ) {
     overlay.style.display = "none";
     body.style.overflowY = "auto";
+    inputs.forEach(item => item.value = '');
   }
 }
 
@@ -27,3 +30,17 @@ formCaller.forEach((item) => {
 });
 
 overlay.addEventListener('click', closeModal);
+
+inputs.forEach(item => {
+  item.addEventListener('invalid', (e) => {
+    e.preventDefault();
+    item.placeholder = 'Заполните это поле!';
+  })
+});
+
+// iMask 
+
+const phoneMask = IMask(
+  document.getElementById('phone'), {
+    mask: '+{7}(000)000-00-00'
+  });
