@@ -34,7 +34,7 @@ overlay.addEventListener('click', closeModal);
 inputs.forEach(item => {
   item.addEventListener('invalid', (e) => {
     e.preventDefault();
-    item.placeholder = 'Заполните это поле!';
+    item.placeholder = 'Please fill in this field';
   })
 });
 
