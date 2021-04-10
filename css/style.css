@@ -387,6 +387,10 @@ body {
     outline: transparent;
 }
 
+.preorder .btn {
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 1366px) {
     .container {
         width: 90%;
@@ -554,6 +558,7 @@ body {
     }
 
     .advantages__item {
+        width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
